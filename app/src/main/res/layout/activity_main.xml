@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/homeBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="serif"
+            android:text="All Bank Balance Check"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/baseline_menu_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homeBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <HorizontalScrollView
+                android:id="@+id/balanceScrollviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarThumbHorizontal="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/missCallLayout"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/misscallbackgrounddesign"
+                        android:elevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/misscallIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/missedcall" />
+
+                        <TextView
+                            android:id="@+id/txtmisscall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_below="@+id/misscallIcon"
+                            android:layout_marginLeft="10dp"
+                            android:text="Missed Call Balance"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:letterSpacing="0.2"
+                            android:text="******0035"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/viewBalanceBtn"
+                            android:layout_width="67dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/txtmisscall"
+                            android:layout_marginLeft="37dp"
+                            android:layout_toEndOf="@id/txtnumber"
+                            android:backgroundTint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtmisscall"
+                            android:layout_marginLeft="49dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/txtnumber"
+                            android:text="Balance"
+                            android:textColor="#9DED3E"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bankBalanceLayout"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@+id/missCallLayout"
+                        android:background="@drawable/misscallbackgrounddesign"
+                        android:backgroundTint="#5065D8"
+                        android:elevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/balanceIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/baseline_account_balance_24" />
+
+                        <TextView
+                            android:id="@+id/txtALlBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_below="@+id/balanceIcon"
+                            android:layout_marginLeft="10dp"
+                            android:text="All Bank Balance Check"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/balanceNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:letterSpacing="0.2"
+                            android:text="****53"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/checkBalanceBtn"
+                            android:layout_width="67dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/txtALlBank"
+                            android:layout_marginLeft="72dp"
+                            android:layout_toEndOf="@id/balanceNumber"
+                            android:backgroundTint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtALlBank"
+                            android:layout_marginLeft="88dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/balanceNumber"
+                            android:text="Check"
+                            android:textColor="#5065D8"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ifscLayout"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/bankBalanceLayout"
+                        android:background="@drawable/ifscbackground"
+                        android:elevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/ifscIcon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/baseline_document_scanner_24" />
+
+                        <TextView
+                            android:id="@+id/txtIfsc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_below="@+id/ifscIcon"
+                            android:layout_marginLeft="10dp"
+                            android:text="Find Your IFSC/MICR Code"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="******0301"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/codeBtn"
+                            android:layout_width="67dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@id/txtIfsc"
+                            android:layout_marginLeft="60dp"
+                            android:layout_toEndOf="@id/txtCode"
+                            android:backgroundTint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtIfsc"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/txtCode"
+                            android:text="Code"
+                            android:textColor="#E91E63"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtallCalc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balanceScrollviewLayout"
+                android:layout_marginTop="8dp"
+                android:text="All Calculator :"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/calcLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtallCalc"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/loanCalcLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/loanCalc"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calcbackground"
+                        android:backgroundTint="#E8FFCD"
+                        android:elevation="1.5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/loancalc" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/loanCalc"
+                        android:layout_centerHorizontal="true"
+                        android:text="LOAN"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/emiCalcLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/loanCalcLayout">
+
+                    <LinearLayout
+                        android:id="@+id/emiCalc"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calcbackground"
+                        android:backgroundTint="#FAE9CF"
+                        android:elevation="1.5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/emicalc" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/emiCalc"
+                        android:layout_centerHorizontal="true"
+                        android:text="EMI"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sipCalcLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/emiCalcLayout">
+
+                    <LinearLayout
+                        android:id="@+id/sipCalc"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calcbackground"
+                        android:backgroundTint="#FADFEC"
+                        android:elevation="1.5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/sipcalc" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sipCalc"
+                        android:layout_centerHorizontal="true"
+                        android:text="SIP"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gstCalcLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/sipCalcLayout">
+
+                    <LinearLayout
+                        android:id="@+id/gstCalc"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calcbackground"
+                        android:backgroundTint="#C3CCFF"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/gstcalc" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gstCalc"
+                        android:layout_centerHorizontal="true"
+                        android:text="GST"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/calcLayout"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtbankMoreOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More Banking Option :"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/bankLocationLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtbankMoreOption"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/bankLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/calcbackground"
+
+                        android:elevation="1.5dp">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/locationicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="30dp"
+                            android:text="Your Near Bank/ATM"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cashCounterLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bankLocationLayout"
+                    android:layout_marginVertical="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/cashCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/cashcounterbackground"
+                        android:elevation="1.5dp">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/cashcountericon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:text="Cash Counter"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bankHolidayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cashCounterLayout">
+
+                    <LinearLayout
+                        android:id="@+id/bankHoliday"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/holidaybackground"
+                        android:elevation="1.5dp">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/holidayicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:text="Bank Holiday"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

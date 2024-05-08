@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IfsccodeActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/ifscBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backBtn"
+            android:fontFamily="serif"
+            android:text="IFSC/MICR Code"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bankingBgImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ifscBar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:src="@drawable/codebgimage" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/smsandinteretLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:layout_below="@id/bankingBgImage"
+        android:layout_centerHorizontal="true"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/smsBankingLayout"
+            android:layout_width="150dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/smsIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/barcode" />
+
+            <TextView
+                android:id="@+id/txtSMSBanking"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/smsIcon"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="IFSC/MICR Code"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/internetBankingLayout"
+            android:layout_width="150dp"
+            android:layout_height="125dp"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/smsBankingLayout"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/misscallIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/favouriteimage" />
+
+            <TextView
+                android:id="@+id/txtmisscall"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/misscallIcon"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Your Favourite Code"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

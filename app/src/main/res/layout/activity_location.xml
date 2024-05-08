@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LocationActivity">
+
+    <RelativeLayout
+        android:id="@+id/locationActivityBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="150dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/txtMissedcallBanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backBtn"
+            android:fontFamily="serif"
+            android:text="Near By Activity"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bankingBgImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationActivityBar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="425dp"
+            android:src="@drawable/locationbgimage" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/smsandinteretLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:layout_below="@id/bankingBgImage"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/yourNearBankLayout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/nearBankImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/smsbankingimage" />
+
+            <TextView
+                android:id="@+id/txtSMSBanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nearBankImage"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Your Near Bank"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:hint="See and find your nearest bank location"
+                android:textSize="13sp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/yourNearAtmLayout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/yourNearBankLayout"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/atmLocationImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/internetbankingimage" />
+
+            <TextView
+                android:id="@+id/txtmisscall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/atmLocationImage"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Your Neat ATM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:hint="See and find your nearest ATM location"
+                android:textSize="13dp"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

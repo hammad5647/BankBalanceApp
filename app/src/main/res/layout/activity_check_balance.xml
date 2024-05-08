@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CheckBalanceActivity">
+
+    <RelativeLayout
+        android:id="@+id/bankingOptionBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="150dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/txtMissedcallBanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backBtn"
+            android:fontFamily="serif"
+            android:text="Banking Option"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bankingBgImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bankingOptionBar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:src="@drawable/bankbalanceimage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/smsandinteretLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/bankingBgImage"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/smsBankingLayout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/smsIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/smsbankingimage" />
+
+            <TextView
+                android:id="@+id/txtSMSBanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/smsIcon"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="SMS Banking"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:hint="All Banking SMS Availabe" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/internetBankingLayout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/smsBankingLayout"
+            android:background="@drawable/misscallbackgrounddesign"
+            android:backgroundTint="#E7ECFA"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/misscallIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/internetbankingimage" />
+
+            <TextView
+                android:id="@+id/txtmisscall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/misscallIcon"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Internet Banking"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Internet Banking with official Site" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bankLocation"
+        android:layout_width="330dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/smsandinteretLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/calcbackground"
+        android:backgroundTint="#E7ECFA"
+        android:elevation="1.5dp">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ussdbankimage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="*99#USSD Banking"
+            android:textSize="20sp"
+            android:letterSpacing="0.08"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
