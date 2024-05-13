@@ -1,6 +1,3 @@
-
 <p>
-<image src = "https://github.com/hammad5647/BankBalanceApp/assets/154864756/6442d674-7b20-4042-9df2-113b8f9f7163" width="220px</src>
-
-  
+  <image src="https://github.com/hammad5647/BankBalanceApp/assets/154864756/077d023d-9bba-4c80-a7e6-296298b783b5 width="220pxl" />
 </p>
